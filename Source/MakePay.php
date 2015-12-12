@@ -4,58 +4,46 @@ header("Content-type: text/xml; charset=utf-8");
      include( "TbcPayTerminal.php" ); 
 	
 	
-      $TbcPay  = new TbcPayTerminal();
+       $TbcPay  = new TbcPayTerminal();
   
-      $TbcPay->SecurityCheck();
+       $TbcPay->SecurityCheck();
 
-      $TbcPay->InitializePayment();
+       $TbcPay->InitializePayment();
   
   
     
         $Transaction  = Transactions::CheckTransaction( $TbcPay->OrderID );
-	    $UserObject   = Momxmarebeli::TitoMomxmarebeli( $TbcPay->User );
+        $UserObject   = Momxmarebeli::TitoMomxmarebeli( $TbcPay->User );
 
 
 	   
        if( !$Transaction )
         {
 	   
-	        
-		  if( $UserObject )
-          {
+	       if( $UserObject )
+               {
 	   
-	          $UserObjec->Daricxva( $TbcPay->Amount ) ;
-	          exit();
+	             $UserObjec->Daricxva( $TbcPay->Amount ) ;
+	             exit();
 		  
-		  }else {
+		 }else {
 		
-	       $TbcPay->FailUser();		
+	              $TbcPay->FailUser();		
 		
-	      }
+	         }
 		  
-
 	
 		  
-		}else {
+           } else {
 		
-	         $TbcPay->ShowOrderFail()();	
+	          $TbcPay->ShowOrderFail()();	
 		
-	    }
+	   }
 	  
 	  
 	  
-    } else {
-		
-		    $TbcPay->ShowError();
-		  
-	} 
+    
 
-	    
-   
- 
-  
-  
-  
   
     
 
