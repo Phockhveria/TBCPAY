@@ -5,10 +5,8 @@ header("Content-type: text/xml; charset=utf-8");
 	
 	
        $TbcPay  = new TbcPayTerminal();
-  
        $TbcPay->SecurityCheck();
-       
-	   $TbcPay->InitilizeCheckUser()
+       $TbcPay->InitilizeCheckUser()
   
 
        $UserObject = Momxmarebeli::TitoMomxmarebeli( $TbcPay->User);
@@ -18,14 +16,14 @@ header("Content-type: text/xml; charset=utf-8");
        if( $UserObject )
         {
 	   
-	      $TbcPay->ShowOkUser( $UserObject->Saxeli );
-	      exit();
+	        $TbcPay->ShowOkUser( $UserObject->Saxeli );
+	        exit();
 		  
-		}else {
+        }else {
 		
-	       $TbcPay->FailUser();		
+	          $TbcPay->FailUser();		
 		
-	    }
+	       }
 	  
 	  
    
