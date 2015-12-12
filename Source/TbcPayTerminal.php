@@ -31,7 +31,7 @@ class TbcPayTerminal {
 	 }
 
 
-	public function SecurityCheck()
+     public function SecurityCheck()
 	{
         
             $hostip = $_SERVER['REMOTE_ADDR'];
