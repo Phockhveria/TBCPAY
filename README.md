@@ -1,0 +1,3 @@
+# TbcPayTerminal
+
+TbcPay გადახდის ტერმინალი
