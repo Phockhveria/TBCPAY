@@ -21,18 +21,19 @@ class TbcPayTerminal {
 
 
 
-	function __construct()
-	{
+     function __construct()
+     {
 
   	     $this->User     =  null;
 	     $this->Amount   =  null;
 	     $this->OrderID  =  null;
 
-	 }
+      }
 
 
-     public function SecurityCheck()
-	{
+
+      public function SecurityCheck()
+      {
         
             $hostip = $_SERVER['REMOTE_ADDR'];
 
@@ -47,6 +48,7 @@ class TbcPayTerminal {
 	     exit(); 
 
          }
+	
 	
 
        public function InitializePayment()
@@ -71,6 +73,7 @@ class TbcPayTerminal {
 
 
 
+
         public	function InitilizeCheckUser()
 	{
 
@@ -90,6 +93,7 @@ class TbcPayTerminal {
 
 
 
+
         public	function ShowOkUser($login)
 	{
 
@@ -104,6 +108,7 @@ class TbcPayTerminal {
 	   	echo $message;
 
 	}
+
 
 
 
