@@ -46,7 +46,7 @@ class TbcPayTerminal {
 
 	     exit(); 
 
-	}
+         }
 	
 
        public function InitializePayment()
@@ -66,7 +66,7 @@ class TbcPayTerminal {
 
 	        exit();
 
-	}
+	 }
 
 
 
